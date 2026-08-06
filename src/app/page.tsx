@@ -7,7 +7,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 export default function HomePage() {
   return (
     <main>
-      <section className="flex min-h-screen items-center py-24">
+      <section className="flex min-h-screen items-center pt-28 pb-24">
         <Container>
           <SectionHeading
             eyebrow="Portfolio foundation"
