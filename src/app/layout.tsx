@@ -19,12 +19,30 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_BASE_URL || "https://placeholder-domain-pending.com"
+  ),
   title: {
     default: "Shivang Thakur | Software Developer",
     template: "%s | Shivang Thakur",
   },
   description:
     "Portfolio of Shivang Thakur, a software developer building thoughtful and reliable digital products.",
+  openGraph: {
+    title: "Shivang Thakur | Software Developer",
+    description:
+      "Portfolio of Shivang Thakur, a software developer building thoughtful and reliable digital products.",
+    url: "/",
+    siteName: "Shivang Thakur",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shivang Thakur | Software Developer",
+    description:
+      "Portfolio of Shivang Thakur, a software developer building thoughtful and reliable digital products.",
+  },
 };
 
 export default function RootLayout({
