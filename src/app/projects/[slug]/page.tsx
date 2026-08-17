@@ -137,8 +137,58 @@ export default async function ProjectPage({
                     About the project
                   </h2>
 
-                  <p className="mt-4 leading-8 text-muted">
+                  <p className="mt-4 leading-8 text-muted whitespace-pre-wrap">
                     {project.description}
+                  </p>
+                </section>
+              )}
+
+              {project.problem && (
+                <section>
+                  <h2 className="font-display text-2xl font-semibold">
+                    The Problem
+                  </h2>
+
+                  <p className="mt-4 leading-8 text-muted whitespace-pre-wrap">
+                    {project.problem}
+                  </p>
+                </section>
+              )}
+
+              {project.team && (
+                <section>
+                  <h2 className="font-display text-2xl font-semibold">
+                    The Team
+                  </h2>
+
+                  <p className="mt-4 leading-8 text-muted whitespace-pre-wrap">
+                    {project.team}
+                  </p>
+                </section>
+              )}
+
+              {project.responsibilities?.length ? (
+                <section>
+                  <h2 className="font-display text-2xl font-semibold">
+                    Responsibilities
+                  </h2>
+
+                  <ul className="mt-4 space-y-3 text-muted">
+                    {project.responsibilities.map((res) => (
+                      <li key={res}>• {res}</li>
+                    ))}
+                  </ul>
+                </section>
+              ) : null}
+
+              {project.architecture && (
+                <section>
+                  <h2 className="font-display text-2xl font-semibold">
+                    Architecture
+                  </h2>
+
+                  <p className="mt-4 leading-8 text-muted whitespace-pre-wrap">
+                    {project.architecture}
                   </p>
                 </section>
               )}
@@ -175,6 +225,20 @@ export default async function ProjectPage({
                 </section>
               ) : null}
 
+              {project.outcomes?.length ? (
+                <section>
+                  <h2 className="font-display text-2xl font-semibold">
+                    Outcomes
+                  </h2>
+
+                  <ul className="mt-4 space-y-3 text-muted">
+                    {project.outcomes.map((outcome) => (
+                      <li key={outcome}>• {outcome}</li>
+                    ))}
+                  </ul>
+                </section>
+              ) : null}
+
               {project.lessons?.length ? (
                 <section>
                   <h2 className="font-display text-2xl font-semibold">
@@ -188,6 +252,22 @@ export default async function ProjectPage({
                       </li>
                     ))}
                   </ul>
+                </section>
+              ) : null}
+
+              {project.screenshots?.length ? (
+                <section>
+                  <h2 className="font-display text-2xl font-semibold">
+                    Screenshots
+                  </h2>
+
+                  <div className="mt-5 grid gap-6">
+                    {project.screenshots.map((src, index) => (
+                      <div key={index} className="overflow-hidden rounded-[2rem] border border-border bg-surface">
+                        <img src={src} alt={`Screenshot ${index + 1}`} className="w-full h-auto" loading="lazy" />
+                      </div>
+                    ))}
+                  </div>
                 </section>
               ) : null}
 

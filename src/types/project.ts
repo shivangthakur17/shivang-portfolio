@@ -13,6 +13,12 @@ export type Project = {
   liveUrl?: string;
   githubUrl?: string;
   videoUrl?: string;
+  problem?: string;
+  architecture?: string;
+  team?: string;
+  responsibilities?: string[];
+  outcomes?: string[];
+  screenshots?: string[];
   challenges?: string[];
   solutions?: string[];
   lessons?: string[];
