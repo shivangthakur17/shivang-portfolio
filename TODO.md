@@ -36,10 +36,13 @@
 
 ## Contact
 - [ ] Contact form component with validation
-- [ ] Basic backend API route scaffold (Zod, Prisma setup)for contact submissions
+- [x] Basic backend API route scaffold (Zod, Prisma setup)
+- [ ] Resend integration (functional)
+- [ ] Abuse/rate limiting (functional)
 
-## Theme
-- [ ] Light mode default setup
+## Backend
+- [x] Setup Prisma Schema
+- [ ] PostgreSQL integration for contact submissions
 - [ ] Dark mode variables and implementation
 
 ## Effects
