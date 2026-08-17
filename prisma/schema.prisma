@@ -7,12 +7,24 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum DeliveryState {
+  PENDING
+  SENT
+  FAILED
+}
+
 model ContactMessage {
-  id        String   @id @default(cuid())
-  name      String
-  email     String
-  message   String
-  ipHash    String?
-  status    String   @default("PENDING")
-  createdAt DateTime @default(now())
+  id           String        @id @default(cuid())
+  name         String
+  email        String
+  company      String?
+  reason       String
+  subject      String
+  message      String
+  
+  // Rate limiting identifier (HMAC of the IP, not the raw IP)
+  ipIdentifier String
+  
+  deliveryState DeliveryState @default(PENDING)
+  createdAt    DateTime      @default(now())
 }

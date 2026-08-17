@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Container } from "@/components/layout/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { siteConfig } from "@/config/site";
+import { ContactForm } from "@/components/contact/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -53,144 +54,7 @@ export default function ContactPage() {
           </div>
 
           <section className="rounded-[2rem] border border-border bg-surface-soft p-6 sm:p-8">
-            <form className="space-y-6">
-              <div className="grid gap-6 sm:grid-cols-2">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="text-sm font-semibold"
-                  >
-                    Name
-                  </label>
-
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    autoComplete="name"
-                    required
-                    className="mt-2 min-h-12 w-full rounded-xl border border-border bg-background px-4 outline-none transition focus:border-focus"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="text-sm font-semibold"
-                  >
-                    Email
-                  </label>
-
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    required
-                    className="mt-2 min-h-12 w-full rounded-xl border border-border bg-background px-4 outline-none transition focus:border-focus"
-                  />
-                </div>
-              </div>
-
-              <div className="grid gap-6 sm:grid-cols-2">
-                <div>
-                  <label
-                    htmlFor="company"
-                    className="text-sm font-semibold"
-                  >
-                    Company
-                    <span className="ml-1 font-normal text-muted">
-                      Optional
-                    </span>
-                  </label>
-
-                  <input
-                    id="company"
-                    name="company"
-                    type="text"
-                    autoComplete="organization"
-                    className="mt-2 min-h-12 w-full rounded-xl border border-border bg-background px-4 outline-none transition focus:border-focus"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="reason"
-                    className="text-sm font-semibold"
-                  >
-                    Reason
-                  </label>
-
-                  <select
-                    id="reason"
-                    name="reason"
-                    required
-                    defaultValue=""
-                    className="mt-2 min-h-12 w-full rounded-xl border border-border bg-background px-4 outline-none transition focus:border-focus"
-                  >
-                    <option value="" disabled>
-                      Select a reason
-                    </option>
-                    <option value="job-opportunity">
-                      Job opportunity
-                    </option>
-                    <option value="project">
-                      Project discussion
-                    </option>
-                    <option value="collaboration">
-                      Collaboration
-                    </option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="subject"
-                  className="text-sm font-semibold"
-                >
-                  Subject
-                </label>
-
-                <input
-                  id="subject"
-                  name="subject"
-                  type="text"
-                  required
-                  className="mt-2 min-h-12 w-full rounded-xl border border-border bg-background px-4 outline-none transition focus:border-focus"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="text-sm font-semibold"
-                >
-                  Message
-                </label>
-
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={7}
-                  required
-                  className="mt-2 w-full resize-y rounded-xl border border-border bg-background px-4 py-3 outline-none transition focus:border-focus"
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-sage px-6 font-semibold text-white transition-colors hover:bg-sage-dark sm:w-auto"
-              >
-                Send message
-              </button>
-
-              <p className="text-sm leading-6 text-muted">
-                The form interface is ready. Secure message delivery will be
-                connected in the next backend step.
-              </p>
-            </form>
+            <ContactForm />
           </section>
         </div>
       </Container>
