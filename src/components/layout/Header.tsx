@@ -6,6 +6,7 @@ import { useState } from "react";
 
 import { Container } from "@/components/layout/Container";
 import { buttonStyles } from "@/components/ui/Button";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { navigationItems } from "@/data/navigation";
 
 export function Header() {
@@ -37,24 +38,30 @@ export function Header() {
             </Link>
           ))}
 
-          <Link
-            href="/contact"
-            className={buttonStyles("primary", "min-h-10 px-4")}
-          >
-            Let&apos;s talk
-          </Link>
+          <div className="flex items-center gap-4">
+            <ThemeToggle />
+            <Link
+              href="/contact"
+              className={buttonStyles("primary", "min-h-10 px-4")}
+            >
+              Let&apos;s talk
+            </Link>
+          </div>
         </nav>
 
-        <button
-          type="button"
-          className="inline-flex size-11 items-center justify-center rounded-full border border-border transition-colors hover:bg-surface md:hidden"
-          aria-label={isOpen ? "Close navigation" : "Open navigation"}
-          aria-expanded={isOpen}
-          aria-controls="mobile-navigation"
-          onClick={() => setIsOpen((current) => !current)}
-        >
-          {isOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <ThemeToggle />
+          <button
+            type="button"
+            className="inline-flex size-11 items-center justify-center rounded-full border border-border transition-colors hover:bg-surface"
+            aria-label={isOpen ? "Close navigation" : "Open navigation"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-navigation"
+            onClick={() => setIsOpen((current) => !current)}
+          >
+            {isOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </Container>
 
       {isOpen && (

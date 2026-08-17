@@ -22,6 +22,24 @@
   --shadow-soft: 0 20px 60px rgb(38 42 35 / 8%);
 }
 
+.dark {
+  --background: #1A1D19;
+  --surface: #242823;
+  --surface-soft: #2E332C;
+
+  --foreground: #E2E0D8;
+  --muted: #A0A59E;
+
+  --sage: #86997B;
+  --sage-dark: #718267;
+  --sage-soft: #3A4633;
+
+  --border: #3A4038;
+  --focus: #86997B;
+
+  --shadow-soft: 0 20px 60px rgb(0 0 0 / 20%);
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-surface: var(--surface);

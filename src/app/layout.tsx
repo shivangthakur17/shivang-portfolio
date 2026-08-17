@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Manrope } from "next/font/google";
 
+import { ThemeProvider, ThemeScript } from "@/components/layout/ThemeProvider";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 
@@ -31,11 +32,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${manrope.variable}`}>
+    <html lang="en" className={`${inter.variable} ${manrope.variable}`} suppressHydrationWarning>
+      <head>
+        <ThemeScript />
+      </head>
       <body className="flex min-h-screen flex-col">
-        <Header />
-        {children}
-        <Footer />
+        <ThemeProvider>
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
