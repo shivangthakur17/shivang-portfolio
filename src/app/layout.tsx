@@ -4,6 +4,7 @@ import { Inter, Manrope } from "next/font/google";
 import { ThemeProvider, ThemeScript } from "@/components/layout/ThemeProvider";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { CursorEffect } from "@/components/effects/CursorEffect";
 
 import "./globals.css";
 
@@ -38,6 +39,7 @@ export default function RootLayout({
       </head>
       <body className="flex min-h-screen flex-col">
         <ThemeProvider>
+          <CursorEffect />
           <Header />
           {children}
           <Footer />

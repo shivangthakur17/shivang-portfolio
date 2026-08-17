@@ -25,18 +25,18 @@
 
 ## About
 - [x] About page structure and content
-- [ ] Refinements based on review
+- [x] Responsive layout refinements
+
+## UI & Design System
+- [x] Implement dark mode architecture (Context + localStorage)
+- [x] Theme Toggle component
+- [x] Core CSS tokens definition
+- [x] Signature lightweight chalk cursor effect
+- [ ] Refine typography hierarchy
 
 ## Contact
-- [x] Contact UI form
-- [ ] Contact server validation
-- [ ] Resend integration
-- [ ] Abuse/rate limiting
-- [ ] Loading/error/success states
-
-## Backend
-- [ ] Setup Prisma Schema
-- [ ] PostgreSQL integration for contact submissions
+- [ ] Contact form component with validation
+- [ ] Basic backend API route scaffold (Zod, Prisma setup)for contact submissions
 
 ## Theme
 - [ ] Light mode default setup
