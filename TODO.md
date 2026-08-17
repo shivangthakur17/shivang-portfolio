@@ -20,8 +20,8 @@
 - [x] Project data model and store
 - [x] Dynamic route `[slug]` and basic case-study template
 - [ ] Reusable project card component (evaluate existing)
-- [ ] Extend optional project fields in data (architecture, screenshots, etc.)
-- [ ] Polish case-study template details
+- [x] Extend optional project fields in data (architecture, screenshots, etc.)
+- [x] Polish case-study template details
 
 ## About
 - [x] About page structure and content

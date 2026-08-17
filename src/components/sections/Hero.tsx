@@ -15,7 +15,7 @@ export function Hero() {
               Software Developer
             </p>
 
-            <h1 className="font-display text-5xl font-semibold tracking-[-0.04em] sm:text-6xl lg:text-7xl">
+            <h1 className="font-display text-4xl font-semibold tracking-[-0.04em] sm:text-6xl lg:text-7xl">
               {siteConfig.name}
             </h1>
 
@@ -34,7 +34,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+          <div className="relative mx-auto mt-8 w-full max-w-[18rem] sm:max-w-md lg:mt-0 lg:max-w-none">
             <div className="absolute -inset-5 -z-10 rounded-[2.5rem] bg-sage-soft/70 blur-2xl" />
 
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-border bg-surface shadow-[var(--shadow-soft)]">
@@ -48,7 +48,7 @@ export function Hero() {
               />
             </div>
 
-            <div className="absolute -bottom-5 -left-4 rounded-2xl border border-border bg-background/95 px-5 py-4 shadow-[var(--shadow-soft)] backdrop-blur">
+            <div className="absolute -bottom-5 left-2 rounded-2xl border border-border bg-background/95 px-5 py-4 shadow-[var(--shadow-soft)] backdrop-blur sm:-left-4">
               <p className="text-sm font-semibold">Based in Canada</p>
               <p className="mt-1 text-sm text-muted">
                 Open to software opportunities
