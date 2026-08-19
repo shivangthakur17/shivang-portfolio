@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { contactSchema } from "@/lib/validations/contact";
+import { buttonStyles } from "@/components/ui/Button";
 
 export function ContactForm() {
   const [loading, setLoading] = useState(false);
@@ -166,7 +167,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={loading}
-        className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-sage px-6 font-semibold text-white transition-colors hover:bg-sage-dark focus:ring-2 focus:ring-sage focus:ring-offset-2 disabled:opacity-70 sm:w-auto"
+        className={buttonStyles("primary", "min-h-12 w-full sm:w-auto")}
       >
         {loading ? "Sending..." : "Send message"}
       </button>

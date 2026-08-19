@@ -53,7 +53,7 @@ export function Header() {
           <ThemeToggle />
           <button
             type="button"
-            className="inline-flex size-11 items-center justify-center rounded-full border border-border transition-colors hover:bg-surface"
+            className="inline-flex size-11 items-center justify-center rounded-full border border-border-secondary transition-colors hover:bg-surface-soft"
             aria-label={isOpen ? "Close navigation" : "Open navigation"}
             aria-expanded={isOpen}
             aria-controls="mobile-navigation"
