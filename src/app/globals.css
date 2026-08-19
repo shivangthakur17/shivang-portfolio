@@ -159,3 +159,16 @@ a {
   outline: 3px solid var(--focus);
   outline-offset: 4px;
 }
+
+/* Landing Page Specific Texture Background */
+.home-background {
+  background-color: var(--background);
+  background-image: url('/images/textures/fabric-light.png');
+  background-repeat: repeat;
+  background-size: 600px auto;
+  background-position: top left;
+}
+
+.dark .home-background {
+  background-image: url('/images/textures/fabric-dark.png');
+}
