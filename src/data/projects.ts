@@ -97,6 +97,64 @@ export const projects: Project[] = [
     ]
   },
   {
+    slug: "ttg-talk",
+    title: "TTG Talk — Secure Business Communication Platform",
+    projectType: "Secure Messaging / Full Stack / Systems Design",
+    summary: "A secure cross-platform business messaging platform with end-to-end encrypted chat, real-time communication, group conversations, and an integrated Contract Mode for handling agreements inside the messaging workflow.",
+    description: "The team built a full-stack communication platform consisting of cross-platform desktop (Electron/React) and mobile (React Native) clients connected to a Node.js/Socket.io backend with PostgreSQL.\n\nThe system includes real-time one-to-one messaging, group conversations, end-to-end encrypted communication, Contract Mode, cross-platform access, secure authentication, and a containerized CI workflow.",
+    status: "completed",
+    featured: false,
+    role: "Team Lead & Lead Developer",
+    technologies: [
+      "React 18",
+      "Electron",
+      "Vite",
+      "Tailwind CSS",
+      "React Native",
+      "Expo",
+      "Node.js",
+      "Express",
+      "Socket.io",
+      "PostgreSQL",
+      "Sequelize",
+      "JWT",
+      "bcrypt",
+      "@signalapp/libsignal-client",
+      "better-sqlite3",
+      "Jest",
+      "Docker",
+      "GitHub Actions"
+    ],
+    problem: "Businesses need communication tools that are fast and collaborative while also protecting sensitive information and supporting formal agreements.\n\nTypical chat platforms are not designed around both secure internal communication and contract-oriented workflows in the same product.\n\nTTG Talk was designed to combine:\n- secure messaging\n- real-time communication\n- cross-platform access\n- group conversations\n- agreement/contract workflows\n- enterprise-oriented architecture and documentation",
+    responsibilities: [
+      "Led a team of 6 developers",
+      "Helped design and architect the secure internal messaging platform",
+      "Conducted client discovery and requirements gathering",
+      "Documented functional and system requirements",
+      "Managed Agile project timelines and team deliverables",
+      "Coordinated development planning across the team",
+      "Produced the SDLC documentation suite",
+      "Created and maintained technical/system diagrams including ERD, UML, use-case, sequence, package, and deployment diagrams",
+      "Produced the system design documentation",
+      "Created fully functional UI/UX designs in Figma",
+      "Developed a working prototype",
+      "Helped bring the system to a development-ready state"
+    ],
+    solutions: [
+      "End-to-end encrypted messaging designed around Signal Protocol-based architecture",
+      "Real-time messaging and group conversations through Socket.io",
+      "Agreement/contract workflow inside chat via Contract Mode",
+      "Cross-platform architecture with Electron desktop and React Native mobile clients",
+      "Secure authentication and containerized development/CI workflow"
+    ],
+    challenges: [
+      "Coordinating the design of a secure, multi-client messaging platform required aligning product requirements, data models, security concerns, desktop/mobile flows, backend services, and documentation across a six-person team."
+    ],
+    lessons: [
+      "The project reinforced that secure systems depend as much on clear architecture, requirements traceability, team coordination, and consistent interface contracts as they do on individual technologies."
+    ]
+  },
+  {
     slug: "focus-farm",
     title: "Focus Farm",
     projectType: "Mobile / Gamification / Digital Wellbeing",
