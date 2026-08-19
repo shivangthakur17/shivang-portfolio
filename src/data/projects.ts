@@ -19,7 +19,7 @@ export const projects: Project[] = [
     summary:
       "An independent project focused on practical development and problem-solving.",
     status: "in-progress",
-    featured: true,
+    featured: false,
     technologies: ["React", "Node.js"],
   },
 ];

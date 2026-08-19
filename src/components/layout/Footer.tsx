@@ -19,7 +19,7 @@ export function Footer() {
 
           {/* Signature Placeholder: Replace this div with an actual image when ready */}
           <div className="flex h-12 items-center justify-center text-sm font-style: italic text-muted opacity-50">
-            [Signature Placeholder]
+            {/* Future signature image will go here */}
           </div>
 
           <div className="flex gap-6 text-sm font-medium text-muted">

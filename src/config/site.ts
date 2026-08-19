@@ -3,7 +3,7 @@ export const siteConfig = {
   role: "Software Developer",
   description:
     "Building reliable digital products through thoughtful engineering and practical problem-solving.",
-  url: "https://your-domain.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   email: "shivangthakur2006@gmail.com",
   links: {
     github: "https://github.com/shivangthakur17",
