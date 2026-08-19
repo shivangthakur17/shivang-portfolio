@@ -36,7 +36,7 @@ export function Hero() {
 
           <div className="relative mx-auto mt-10 w-full max-w-[18rem] sm:max-w-sm lg:mt-0 lg:max-w-[28rem]">
             {/* Subtle halo for dark mode separation */}
-            <div className="absolute left-1/2 top-[15%] -z-20 hidden w-3/4 -translate-x-1/2 rounded-full bg-sage-soft/10 blur-[80px] dark:block" />
+            <div className="absolute left-1/2 top-[15%] -z-20 hidden w-3/4 -translate-x-1/2 rounded-full bg-sage/15 blur-[80px] dark:block" />
 
             {/* ONE clean editorial background arch */}
             <div className="absolute inset-x-4 top-8 bottom-0 -z-10 overflow-hidden rounded-t-full rounded-b-3xl bg-surface-soft sm:inset-x-8 sm:top-12">
