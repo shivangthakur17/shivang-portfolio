@@ -10,11 +10,11 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    "bg-action-primary text-action-primary-text hover:bg-action-primary-hover border border-transparent",
+    "bg-action-primary text-action-primary-fg hover:bg-action-primary-hover border border-transparent",
   secondary:
-    "border border-action-secondary-border bg-transparent text-action-secondary-text hover:bg-action-secondary-hover-bg hover:border-action-secondary-hover-border",
+    "border border-action-secondary-border bg-transparent text-action-secondary-fg hover:bg-action-secondary-hover-bg hover:border-action-secondary-hover-border",
   ghost:
-    "bg-transparent text-action-ghost-text hover:bg-action-ghost-hover-bg",
+    "bg-transparent text-action-ghost-fg hover:bg-action-ghost-hover-bg",
 };
 
 export function buttonStyles(
