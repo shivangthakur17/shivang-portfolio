@@ -201,3 +201,23 @@ a {
   background-color: #EDE8DE;
   color: #173F35;
 }
+
+.btn-inverse {
+  background-color: #F8F6F1;
+  color: #173F35;
+}
+
+.btn-inverse:hover {
+  background-color: #EEE9DF;
+  color: #173F35;
+}
+
+.dark .btn-inverse {
+  background-color: #0F1714;
+  color: #F8F6F1;
+}
+
+.dark .btn-inverse:hover {
+  background-color: #173F35;
+  color: #F8F6F1;
+}

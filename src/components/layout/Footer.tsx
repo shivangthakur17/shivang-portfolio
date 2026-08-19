@@ -5,9 +5,9 @@ import { siteConfig } from "@/config/site";
 
 export function Footer() {
   return (
-    <footer className="mt-auto py-12">
+    <footer className="py-10 md:py-12">
       <Container>
-        <div className="flex flex-col items-center justify-between gap-6 border-t border-border pt-12 sm:flex-row">
+        <div className="flex flex-col items-center justify-between gap-6 border-t border-border pt-10 md:pt-12 sm:flex-row">
           <div className="flex flex-col gap-2 sm:gap-1">
             <p className="text-sm font-semibold text-foreground">
               {siteConfig.name}

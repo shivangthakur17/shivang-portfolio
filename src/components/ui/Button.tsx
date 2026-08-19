@@ -2,7 +2,7 @@ import type { ButtonHTMLAttributes } from "react";
 
 import { cn } from "@/lib/utils";
 
-type ButtonVariant = "primary" | "secondary" | "ghost";
+type ButtonVariant = "primary" | "secondary" | "ghost" | "inverse";
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: ButtonVariant;
@@ -14,6 +14,7 @@ const variants: Record<ButtonVariant, string> = {
     "border border-action-secondary-border bg-transparent text-action-secondary-fg hover:bg-action-secondary-hover-bg hover:border-action-secondary-hover-border",
   ghost:
     "bg-transparent text-action-ghost-fg hover:bg-action-ghost-hover-bg",
+  inverse: "btn-inverse border border-transparent",
 };
 
 export function buttonStyles(
