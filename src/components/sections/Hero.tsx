@@ -35,10 +35,19 @@ export function Hero() {
           </div>
 
           <div className="relative mx-auto mt-12 w-full max-w-[20rem] sm:max-w-[22rem] lg:mt-0 lg:max-w-[26rem]">
-            {/* Editorial background shape with subtle grain */}
-            <div className="absolute top-12 bottom-0 left-4 right-4 -z-10 rounded-t-full rounded-b-3xl bg-surface-soft">
+            {/* Editorial background shape with tile motif and subtle grain */}
+            <div className="absolute top-12 bottom-0 left-4 right-4 -z-10 overflow-hidden rounded-t-full rounded-b-3xl bg-surface-soft">
+              {/* Tile Motif Pattern */}
               <div 
-                className="absolute inset-0 rounded-t-full rounded-b-3xl opacity-[0.04] mix-blend-multiply dark:opacity-10 dark:mix-blend-overlay"
+                className="absolute inset-0 bg-sage-dark opacity-[0.08] blur-[0.5px] dark:opacity-[0.12]"
+                style={{ 
+                  WebkitMaskImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M20 0c11.046 0 20 8.954 20 20s-8.954 20-20 20S0 31.046 0 20 8.954 0 20 0zm0 2c-9.941 0-18 8.059-18 18s8.059 18 18 18 18-8.059 18-18S29.941 2 20 2z'/%3E%3C/svg%3E\")",
+                  maskImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M20 0c11.046 0 20 8.954 20 20s-8.954 20-20 20S0 31.046 0 20 8.954 0 20 0zm0 2c-9.941 0-18 8.059-18 18s8.059 18 18 18 18-8.059 18-18S29.941 2 20 2z'/%3E%3C/svg%3E\")",
+                }}
+              />
+              {/* Grain Texture */}
+              <div 
+                className="absolute inset-0 opacity-[0.04] mix-blend-multiply dark:opacity-[0.08] dark:mix-blend-overlay"
                 style={{ backgroundImage: "url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E')" }}
               />
             </div>
