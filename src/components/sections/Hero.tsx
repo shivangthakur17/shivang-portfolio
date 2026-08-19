@@ -34,21 +34,29 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="relative mx-auto mt-8 w-full max-w-[18rem] sm:max-w-md lg:mt-0 lg:max-w-none">
-            <div className="absolute -inset-5 -z-10 rounded-[2.5rem] bg-sage-soft/70 blur-2xl" />
+          <div className="relative mx-auto mt-12 w-full max-w-[20rem] sm:max-w-[22rem] lg:mt-0 lg:max-w-[26rem]">
+            {/* Editorial background shape with subtle grain */}
+            <div className="absolute top-12 bottom-0 left-4 right-4 -z-10 rounded-t-full rounded-b-3xl bg-surface-soft">
+              <div 
+                className="absolute inset-0 rounded-t-full rounded-b-3xl opacity-[0.04] mix-blend-multiply dark:opacity-10 dark:mix-blend-overlay"
+                style={{ backgroundImage: "url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E')" }}
+              />
+            </div>
 
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-border bg-surface shadow-[var(--shadow-soft)]">
+            {/* Free-standing Portrait */}
+            <div className="relative aspect-[4/5] w-full">
               <Image
                 src="/images/profile/shivang-portrait.png"
                 alt="Portrait of Shivang Thakur"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 45vw"
-                className="object-cover object-bottom"
+                className="object-contain object-bottom drop-shadow-[0_15px_30px_rgba(0,0,0,0.15)] dark:drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)]"
               />
             </div>
 
-            <div className="absolute -bottom-5 left-2 rounded-2xl border border-border bg-background/95 px-5 py-4 shadow-[var(--shadow-soft)] backdrop-blur sm:-left-4">
+            {/* Floating Editorial Badge */}
+            <div className="absolute -bottom-6 -left-4 z-10 rounded-2xl border border-border bg-background/90 px-6 py-4 shadow-[var(--shadow-soft)] backdrop-blur sm:-left-8">
               <p className="text-sm font-semibold">Based in Canada</p>
               <p className="mt-1 text-sm text-muted">
                 Open to software opportunities
