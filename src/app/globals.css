@@ -159,3 +159,25 @@ a {
   outline: 3px solid var(--focus);
   outline-offset: 4px;
 }
+
+.hero {
+  position: relative;
+  isolation: isolate;
+}
+
+.hero-texture {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url('/images/textures/fabric-light.png');
+  opacity: 0.03;
+}
+
+.dark .hero-texture {
+  background-image: url('/images/textures/fabric-dark.png');
+  opacity: 0.035;
+}

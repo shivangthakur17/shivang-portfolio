@@ -7,11 +7,9 @@ import { siteConfig } from "@/config/site";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden pt-28 pb-20">
+    <section className="hero flex min-h-screen items-center overflow-hidden pt-28 pb-20">
       {/* Subtle Fabric Texture Background Layer */}
-      <div 
-        className="pointer-events-none absolute inset-0 -z-30 bg-[url('/images/textures/fabric-light.png')] bg-cover bg-center bg-no-repeat opacity-[0.05] dark:bg-[url('/images/textures/fabric-dark.png')] dark:opacity-[0.04]"
-      />
+      <div className="hero-texture" aria-hidden="true" />
       <Container>
         <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_1fr] lg:gap-12 xl:gap-20">
           <div className="max-w-xl">
