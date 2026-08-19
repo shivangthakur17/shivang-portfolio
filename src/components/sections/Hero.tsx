@@ -9,8 +9,8 @@ export function Hero() {
   return (
     <section className="flex min-h-screen items-center pt-28 pb-20">
       <Container>
-        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
-          <div className="max-w-2xl">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_1fr] lg:gap-12 xl:gap-20">
+          <div className="max-w-xl">
             <p className="mb-5 text-sm font-semibold uppercase tracking-[0.2em] text-sage-dark">
               Software Developer
             </p>
@@ -34,40 +34,41 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="relative mx-auto mt-12 w-full max-w-[20rem] sm:max-w-[22rem] lg:mt-0 lg:max-w-[26rem]">
-            {/* Editorial background shape with tile motif and subtle grain */}
-            <div className="absolute top-12 bottom-0 left-4 right-4 -z-10 overflow-hidden rounded-t-full rounded-b-3xl bg-surface-soft">
-              {/* Tile Motif Pattern */}
+          <div className="relative mx-auto mt-12 w-full max-w-[22rem] sm:max-w-[24rem] lg:mt-0 lg:max-w-[28rem]">
+            {/* Subtle cool halo for dark mode separation */}
+            <div className="absolute left-1/2 top-[15%] -z-20 hidden w-3/4 -translate-x-1/2 rounded-full bg-[#87A8A4]/15 blur-[80px] dark:block" />
+
+            {/* Editorial background shape with real tile pattern */}
+            <div className="absolute top-[10%] bottom-[2%] left-[10%] right-[10%] -z-10 overflow-hidden rounded-t-full rounded-b-3xl bg-surface-soft dark:bg-[#253332]">
+              {/* Provided Tile Pattern */}
               <div 
-                className="absolute inset-0 bg-sage-dark opacity-[0.08] blur-[0.5px] dark:opacity-[0.12]"
+                className="absolute inset-0 opacity-[0.10] saturate-50 mix-blend-luminosity dark:opacity-[0.06] dark:mix-blend-overlay"
                 style={{ 
-                  WebkitMaskImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M20 0c11.046 0 20 8.954 20 20s-8.954 20-20 20S0 31.046 0 20 8.954 0 20 0zm0 2c-9.941 0-18 8.059-18 18s8.059 18 18 18 18-8.059 18-18S29.941 2 20 2z'/%3E%3C/svg%3E\")",
-                  maskImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M20 0c11.046 0 20 8.954 20 20s-8.954 20-20 20S0 31.046 0 20 8.954 0 20 0zm0 2c-9.941 0-18 8.059-18 18s8.059 18 18 18 18-8.059 18-18S29.941 2 20 2z'/%3E%3C/svg%3E\")",
+                  backgroundImage: "url('/images/backgrounds/hero-pattern.png')",
+                  backgroundSize: "200px 200px",
+                  backgroundPosition: "center top",
+                  backgroundRepeat: "repeat"
                 }}
-              />
-              {/* Grain Texture */}
-              <div 
-                className="absolute inset-0 opacity-[0.04] mix-blend-multiply dark:opacity-[0.08] dark:mix-blend-overlay"
-                style={{ backgroundImage: "url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E')" }}
               />
             </div>
 
-            {/* Free-standing Portrait */}
-            <div className="relative aspect-[4/5] w-full">
+            {/* Free-standing Portrait - Natural Aspect Ratio */}
+            <div className="relative w-full">
               <Image
                 src="/images/profile/shivang-portrait.png"
                 alt="Portrait of Shivang Thakur"
-                fill
+                width={1024}
+                height={1536}
                 priority
-                sizes="(max-width: 1024px) 100vw, 45vw"
-                className="object-contain object-bottom drop-shadow-[0_15px_30px_rgba(0,0,0,0.15)] dark:drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)]"
+                sizes="(max-width: 1024px) 90vw, 50vw"
+                className="h-auto w-full object-bottom drop-shadow-[0_15px_30px_rgba(0,0,0,0.15)] dark:drop-shadow-[0_15px_30px_rgba(0,0,0,0.4)]"
               />
             </div>
 
-            {/* Floating Editorial Badge */}
-            <div className="absolute -bottom-6 -left-4 z-10 rounded-2xl border border-border bg-background/90 px-6 py-4 shadow-[var(--shadow-soft)] backdrop-blur sm:-left-8">
-              <p className="text-sm font-semibold">Based in Canada</p>
-              <p className="mt-1 text-sm text-muted">
+            {/* Floating Availability Badge */}
+            <div className="absolute -bottom-2 -left-2 z-10 rounded-xl border border-border bg-background/95 px-5 py-3 shadow-[var(--shadow-soft)] backdrop-blur sm:-left-4 lg:-left-8">
+              <p className="text-xs font-semibold uppercase tracking-wider text-foreground">Based in Canada</p>
+              <p className="mt-0.5 text-xs text-muted">
                 Open to software opportunities
               </p>
             </div>
