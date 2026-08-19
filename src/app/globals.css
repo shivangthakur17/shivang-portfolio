@@ -181,3 +181,23 @@ a {
   background-image: url('/images/textures/fabric-dark.png');
   opacity: 0.035;
 }
+
+.btn-primary {
+  background-color: #173F35;
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  background-color: #12342C;
+  color: #FFFFFF;
+}
+
+.dark .btn-primary {
+  background-color: #F8F6F1;
+  color: #173F35;
+}
+
+.dark .btn-primary:hover {
+  background-color: #EDE8DE;
+  color: #173F35;
+}

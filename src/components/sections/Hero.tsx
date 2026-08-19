@@ -10,7 +10,7 @@ export function Hero() {
     <section className="hero flex min-h-screen items-center overflow-hidden pt-28 pb-20">
       {/* Subtle Fabric Texture Background Layer */}
       <div className="hero-texture" aria-hidden="true" />
-      <Container>
+      <Container className="relative z-10">
         <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_1fr] lg:gap-12 xl:gap-20">
           <div className="max-w-xl">
             <p className="mb-5 text-sm font-semibold uppercase tracking-[0.2em] text-sage-dark">
