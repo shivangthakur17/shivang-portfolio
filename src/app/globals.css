@@ -23,21 +23,21 @@
 }
 
 .dark {
-  --background: #1A1D19;
-  --surface: #242823;
-  --surface-soft: #2E332C;
+  --background: #0F1714;
+  --surface: #18231F;
+  --surface-soft: #1B2723;
 
   --foreground: #E2E0D8;
   --muted: #A0A59E;
 
   --sage: #86997B;
   --sage-dark: #718267;
-  --sage-soft: #3A4633;
+  --sage-soft: #22312C;
 
-  --border: #3A4038;
+  --border: #22312C;
   --focus: #86997B;
 
-  --shadow-soft: 0 20px 60px rgb(0 0 0 / 20%);
+  --shadow-soft: 0 20px 60px rgb(0 0 0 / 30%);
 }
 
 @theme inline {

@@ -34,25 +34,24 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="relative mx-auto mt-12 w-full max-w-[22rem] sm:max-w-[24rem] lg:mt-0 lg:max-w-[28rem]">
-            {/* Subtle cool halo for dark mode separation */}
-            <div className="absolute left-1/2 top-[15%] -z-20 hidden w-3/4 -translate-x-1/2 rounded-full bg-[#87A8A4]/15 blur-[80px] dark:block" />
+          <div className="relative mx-auto mt-10 w-full max-w-[18rem] sm:max-w-sm lg:mt-0 lg:max-w-[28rem]">
+            {/* Subtle halo for dark mode separation */}
+            <div className="absolute left-1/2 top-[15%] -z-20 hidden w-3/4 -translate-x-1/2 rounded-full bg-sage-soft/10 blur-[80px] dark:block" />
 
-            {/* Editorial background shape with real tile pattern */}
-            <div className="absolute top-[10%] bottom-[2%] left-[10%] right-[10%] -z-10 overflow-hidden rounded-t-full rounded-b-3xl bg-surface-soft dark:bg-[#253332]">
-              {/* Provided Tile Pattern */}
+            {/* ONE clean editorial background arch */}
+            <div className="absolute inset-x-4 top-8 bottom-0 -z-10 overflow-hidden rounded-t-full rounded-b-3xl bg-surface-soft sm:inset-x-8 sm:top-12">
+              {/* Real Tile Pattern Asset */}
               <div 
-                className="absolute inset-0 opacity-[0.10] saturate-50 mix-blend-luminosity dark:opacity-[0.06] dark:mix-blend-overlay"
+                className="absolute inset-0 opacity-[0.08] mix-blend-luminosity dark:opacity-[0.04] dark:mix-blend-overlay"
                 style={{ 
                   backgroundImage: "url('/images/backgrounds/hero-pattern.png')",
-                  backgroundSize: "200px 200px",
+                  backgroundSize: "200px",
                   backgroundPosition: "center top",
-                  backgroundRepeat: "repeat"
                 }}
               />
             </div>
 
-            {/* Free-standing Portrait - Natural Aspect Ratio */}
+            {/* ONE stable portrait image without object-cover cropping */}
             <div className="relative w-full">
               <Image
                 src="/images/profile/shivang-portrait.png"
@@ -60,13 +59,13 @@ export function Hero() {
                 width={1024}
                 height={1536}
                 priority
-                sizes="(max-width: 1024px) 90vw, 50vw"
-                className="h-auto w-full object-bottom drop-shadow-[0_15px_30px_rgba(0,0,0,0.15)] dark:drop-shadow-[0_15px_30px_rgba(0,0,0,0.4)]"
+                sizes="(max-width: 1024px) 90vw, 45vw"
+                className="h-auto w-full object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.15)] dark:drop-shadow-[0_15px_30px_rgba(0,0,0,0.4)]"
               />
             </div>
 
             {/* Floating Availability Badge */}
-            <div className="absolute -bottom-2 -left-2 z-10 rounded-xl border border-border bg-background/95 px-5 py-3 shadow-[var(--shadow-soft)] backdrop-blur sm:-left-4 lg:-left-8">
+            <div className="absolute -bottom-4 -left-2 z-10 rounded-xl border border-border bg-background/95 px-5 py-3 shadow-[var(--shadow-soft)] backdrop-blur sm:-left-6">
               <p className="text-xs font-semibold uppercase tracking-wider text-foreground">Based in Canada</p>
               <p className="mt-0.5 text-xs text-muted">
                 Open to software opportunities
