@@ -6,7 +6,7 @@ import { Journey } from "@/components/sections/Journey";
 
 export default function HomePage() {
   return (
-    <main className="home-background min-h-screen">
+    <main>
       <Hero />
       <FeaturedProjects />
       <AboutPreview />
