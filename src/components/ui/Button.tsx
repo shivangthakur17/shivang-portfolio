@@ -10,11 +10,11 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    "bg-sage text-background hover:bg-sage-dark border border-transparent",
+    "bg-action-primary text-action-primary-text hover:bg-action-primary-hover border border-transparent",
   secondary:
-    "border border-border-secondary bg-transparent text-foreground hover:bg-surface-soft",
+    "border border-action-secondary-border bg-transparent text-action-secondary-text hover:bg-action-secondary-hover-bg hover:border-action-secondary-hover-border",
   ghost:
-    "bg-transparent text-foreground hover:bg-surface-soft",
+    "bg-transparent text-action-ghost-text hover:bg-action-ghost-hover-bg",
 };
 
 export function buttonStyles(
@@ -22,7 +22,7 @@ export function buttonStyles(
   className?: string,
 ) {
   return cn(
-    "inline-flex min-h-11 items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-50",
+    "inline-flex min-h-11 items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50",
     variants[variant],
     className,
   );

@@ -20,7 +20,7 @@ export function ContactPreview() {
             <div className="mt-8">
               <Link
                 href="/contact"
-                className={buttonStyles("secondary", "bg-background border-transparent text-foreground hover:bg-surface gap-2 dark:border-border-secondary dark:bg-transparent dark:hover:bg-surface")}
+                className={buttonStyles("secondary", "gap-2 bg-background dark:bg-transparent")}
               >
                 Let's talk
                 <ArrowRight size={17} />
