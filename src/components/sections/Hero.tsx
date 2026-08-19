@@ -39,12 +39,12 @@ export function Hero() {
 
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-border bg-surface shadow-[var(--shadow-soft)]">
               <Image
-                src="/images/profile/shivang-portrait.jpg"
+                src="/images/profile/shivang-portrait.png"
                 alt="Portrait of Shivang Thakur"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 45vw"
-                className="object-cover object-center"
+                className="object-cover object-bottom"
               />
             </div>
 
