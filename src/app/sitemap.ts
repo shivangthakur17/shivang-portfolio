@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 
 import { projects } from "@/data/projects";
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://placeholder-domain-pending.com";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const projectUrls = projects.map((project) => ({

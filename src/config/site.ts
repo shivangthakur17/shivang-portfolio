@@ -7,6 +7,6 @@ export const siteConfig = {
   email: "shivangthakur2006@gmail.com",
   links: {
     github: "https://github.com/shivangthakur17",
-    linkedin: "https://www.linkedin.com/in/your-profile",
+    linkedin: "https://www.linkedin.com/in/shivang-thakur-ba6853253/",
   },
 } as const;
