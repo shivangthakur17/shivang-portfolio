@@ -97,6 +97,54 @@ export const projects: Project[] = [
     ]
   },
   {
+    slug: "focus-farm",
+    title: "Focus Farm",
+    projectType: "Mobile / Gamification / Digital Wellbeing",
+    summary: "A gamified mobile focus app that introduces mindful friction before distracting app use and turns successful resistance into progress for a persistent pixel-art tree.",
+    problem: "Distracting apps can become subconscious habits because access is nearly frictionless.\n\nFocus Farm explores the idea of adding a deliberate pause between impulse and action, using short mindfulness exercises, commitments, and visible game progress to encourage more intentional device use.",
+    description: "A React Native mobile application combining focus interventions, app-selection controls, timers, sleep-related streak mechanics, local persistence, and a pixel-art growth system.",
+    role: "Sole Developer and App Architect",
+    technologies: [
+      "React Native",
+      "Expo",
+      "expo-router",
+      "TypeScript",
+      "NativeWind",
+      "@react-native-async-storage/async-storage",
+      "react-native-reanimated"
+    ],
+    responsibilities: [
+      "designed the app architecture from scratch",
+      "structured the step-by-step implementation plan",
+      "designed the mobile UI layout",
+      "defined and enforced shared color/design tokens",
+      "implemented the gamification logic",
+      "implemented persistent farm/tree state",
+      "implemented focus/intervention flows",
+      "implemented app selection/blocklist UI",
+      "implemented commitment timer flows",
+      "directed and implemented a major visual refactor from a 16-tile SVG-based farm grid to a layered single-tree sprite system",
+      "preserved existing gamification/state logic through the visual architecture refactor"
+    ],
+    solutions: [
+      "single-tree gamified dashboard with multiple growth stages",
+      "mindfulness intervention flow before temporary access",
+      "breathing exercises and/or MCQ friction prompts",
+      "commitment timers such as 15, 30, or 60 minutes",
+      "blocklist interface for selecting restricted apps",
+      "sleep streak tracking tied to farm/tree progress",
+      "persistent local state (Intervention or blocking workflow rather than system-wide enforcement)"
+    ],
+    challenges: [
+      "The major technical/design challenge was replacing the original 16-tile SVG/math-based farm visualization with a layered pixel-art tree sprite system without breaking the existing gamification logic or TypeScript build."
+    ],
+    lessons: [
+      "Separating visual representation from game state made it possible to completely replace the rendering system without rewriting the underlying progression logic."
+    ],
+    status: "completed",
+    featured: true
+  },
+  {
     slug: "self-flow",
     title: "Self Flow",
     projectType: "Behavioral UX / Productivity / Frontend Architecture",
