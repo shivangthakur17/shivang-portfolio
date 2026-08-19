@@ -2,53 +2,6 @@ import type { Project } from "@/types/project";
 
 export const projects: Project[] = [
   {
-    slug: "baettledger",
-    title: "BaettLedger",
-    summary: "A construction-site equipment tracking system that automatically detects and reconciles equipment moving on and off job sites using edge cameras and Azure AI, replacing manual clipboard tracking.",
-    description: "Our team designed an automated equipment-tracking pipeline combining edge image capture, Azure AI services, cloud APIs, structured data storage, and a live dashboard.\n\nA Raspberry Pi and camera capture four views for each tracking session:\n- left\n- middle\n- right\n- overview\n\nThe images are uploaded to Azure Blob Storage and processed through Azure AI Vision.\n\nDetection results are then passed through an Azure AI Foundry Count Agent, which performs structured count reconciliation before trusted counts are stored and exposed through the API.\n\nA confidence threshold of 0.80 is used as a reliability safeguard before detections are accepted.",
-    status: "completed",
-    featured: true,
-    role: "API Backend Owner",
-    technologies: [
-      "Python 3.11",
-      "Azure Functions",
-      "Azure AI Vision",
-      "Azure AI Foundry",
-      "Azure SQL",
-      "Azure Blob Storage",
-      "Azure Static Web Apps",
-      "Raspberry Pi"
-    ],
-    problem: "Construction sites often rely on manual observation, clipboards, and spreadsheets to track equipment entering and leaving a job site.\n\nThis process is slow, error-prone, and provides little real-time visibility into what equipment is currently on-site, what has left, or what may be missing.",
-    architecture: "Edge Camera\n→ Azure Functions\n→ Blob Storage\n→ AI Vision\n→ Count Agent\n→ Azure SQL\n→ Dashboard",
-    course: "Emerging Trends",
-    projectType: "Applied AI / Cloud / Edge Computing",
-    responsibilities: [
-      "Built and tested the complete v2 API backend end-to-end against real Azure resources",
-      "Implemented equipment-tracking session creation",
-      "Built photo-upload flows into Azure Blob Storage",
-      "Implemented Azure SQL database writes",
-      "Integrated Azure AI Vision detection calls",
-      "Integrated the Azure AI Foundry Count Agent",
-      "Implemented detection persistence and reconciliation logic",
-      "Added idempotent duplicate-request handling",
-      "Implemented authenticated API requests",
-      "Tested the complete backend workflow across Azure services",
-      "Debugged cross-service configuration and request issues",
-      "Merged backend changes into the main repository through pull requests"
-    ],
-    challenges: [
-      "One of the biggest challenges was making the system reliable across multiple independent cloud services.",
-      "Small configuration or request-formatting issues could break the entire pipeline even when the individual service was working correctly.",
-      "Examples included malformed endpoint configuration values and PowerShell JSON/request formatting issues during API testing.",
-      "This reinforced the importance of validating configuration boundaries, testing integrations independently, and tracing failures across distributed systems rather than assuming the problem exists inside a single service."
-    ],
-    lessons: [
-      "Building an AI-enabled system is not just about calling an AI model.",
-      "The reliability of the surrounding API layer, authentication, storage, configuration, error handling, idempotency, and confidence rules has a major impact on whether the AI output can actually be trusted in a production-style workflow."
-    ]
-  },
-  {
     slug: "capstone-project",
     title: "LÄYRD — Cake in a Can | Espresso Shots",
     summary: "A full-stack e-commerce platform built for a Calgary boutique dessert brand selling handcrafted cheesecakes, tiramisu in 250ml cans, and espresso shots, combining retail, private-event, wholesale, and administrative workflows in one platform.",
@@ -97,14 +50,90 @@ export const projects: Project[] = [
     ]
   },
   {
-    slug: "personal-project",
-    title: "Personal Project",
-    summary:
-      "An independent project focused on practical development and problem-solving.",
-    status: "in-progress",
-    featured: false,
-    technologies: ["React", "Node.js"],
+    slug: "baettledger",
+    title: "BaettLedger",
+    summary: "A construction-site equipment tracking system that automatically detects and reconciles equipment moving on and off job sites using edge cameras and Azure AI, replacing manual clipboard tracking.",
+    description: "Our team designed an automated equipment-tracking pipeline combining edge image capture, Azure AI services, cloud APIs, structured data storage, and a live dashboard.\n\nA Raspberry Pi and camera capture four views for each tracking session:\n- left\n- middle\n- right\n- overview\n\nThe images are uploaded to Azure Blob Storage and processed through Azure AI Vision.\n\nDetection results are then passed through an Azure AI Foundry Count Agent, which performs structured count reconciliation before trusted counts are stored and exposed through the API.\n\nA confidence threshold of 0.80 is used as a reliability safeguard before detections are accepted.",
+    status: "completed",
+    featured: true,
+    role: "API Backend Owner",
+    technologies: [
+      "Python 3.11",
+      "Azure Functions",
+      "Azure AI Vision",
+      "Azure AI Foundry",
+      "Azure SQL",
+      "Azure Blob Storage",
+      "Azure Static Web Apps",
+      "Raspberry Pi"
+    ],
+    problem: "Construction sites often rely on manual observation, clipboards, and spreadsheets to track equipment entering and leaving a job site.\n\nThis process is slow, error-prone, and provides little real-time visibility into what equipment is currently on-site, what has left, or what may be missing.",
+    architecture: "Edge Camera\n→ Azure Functions\n→ Blob Storage\n→ AI Vision\n→ Count Agent\n→ Azure SQL\n→ Dashboard",
+    course: "Emerging Trends",
+    projectType: "Applied AI / Cloud / Edge Computing",
+    responsibilities: [
+      "Built and tested the complete v2 API backend end-to-end against real Azure resources",
+      "Implemented equipment-tracking session creation",
+      "Built photo-upload flows into Azure Blob Storage",
+      "Implemented Azure SQL database writes",
+      "Integrated Azure AI Vision detection calls",
+      "Integrated the Azure AI Foundry Count Agent",
+      "Implemented detection persistence and reconciliation logic",
+      "Added idempotent duplicate-request handling",
+      "Implemented authenticated API requests",
+      "Tested the complete backend workflow across Azure services",
+      "Debugged cross-service configuration and request issues",
+      "Merged backend changes into the main repository through pull requests"
+    ],
+    challenges: [
+      "One of the biggest challenges was making the system reliable across multiple independent cloud services.",
+      "Small configuration or request-formatting issues could break the entire pipeline even when the individual service was working correctly.",
+      "Examples included malformed endpoint configuration values and PowerShell JSON/request formatting issues during API testing.",
+      "This reinforced the importance of validating configuration boundaries, testing integrations independently, and tracing failures across distributed systems rather than assuming the problem exists inside a single service."
+    ],
+    lessons: [
+      "Building an AI-enabled system is not just about calling an AI model.",
+      "The reliability of the surrounding API layer, authentication, storage, configuration, error handling, idempotency, and confidence rules has a major impact on whether the AI output can actually be trusted in a production-style workflow."
+    ]
   },
+  {
+    slug: "self-flow",
+    title: "Self Flow",
+    projectType: "Behavioral UX / Productivity / Frontend Architecture",
+    summary: "A minimalist behavioral-mirror web application designed for honest daily self-reflection and productivity tracking without the cognitive friction, shame, and punitive failure states common in traditional productivity apps.",
+    problem: "Many productivity-tracking apps rely on dense metrics, explicit progress counters, and aggressive failure states. Missing a goal often produces red warnings, shame, or cognitive overload, which can make users abandon the product entirely.\n\nSelf Flow was designed as a calmer alternative: a non-judgmental space where daily choices are treated as neutral data points to observe rather than failures to punish.",
+    description: "A client-side reflective check-in experience built around a deterministic branching state flow.\n\nThe interface presents one question at a time and routes users through a structured reflection sequence based on their answers.\n\nThe system intentionally removes progress counters and heavy manual input to reduce choice paralysis and encourage presence.",
+    role: "Solo Software Developer / Creator",
+    technologies: ["React 18+", "Tailwind CSS", "LocalStorage"],
+    responsibilities: [
+      "designed the product concept and interaction architecture from original handwritten notebook sketches",
+      "designed the UI/UX layout",
+      "defined the custom visual system and Tailwind color tokens",
+      "implemented the question state controller",
+      "implemented branching navigation using a data-driven object graph / linked map",
+      "separated question data from UI rendering",
+      "implemented local persistence for the MVP",
+      "built the reflective interaction flow end-to-end"
+    ],
+    solutions: [
+      "linear five-question reflective stream",
+      "one-question-at-a-time interaction to reduce cognitive load",
+      "predefined click-target inputs instead of unnecessary typing",
+      "non-punitive detour routing using neutral curiosity-based states",
+      "hidden progress by intentionally omitting “step X of Y”",
+      "contextual data mirror showing the current interaction data stream in a monospace terminal-style panel",
+      "local persistence for MVP sessions"
+    ],
+    architecture: "A dedicated question graph stores each question and its possible options. Each option points to the ID of the next node, allowing the state controller to route dynamically without embedding large if/else trees inside UI components.",
+    challenges: [
+      "The main architecture challenge was making the branching questionnaire scalable without filling UI components with hardcoded conditional logic."
+    ],
+    lessons: [
+      "Separating navigation data from presentation using a graph-based question model made the interaction flow easier to extend, reason about, and maintain."
+    ],
+    status: "completed",
+    featured: true
+  }
 ];
 
 export const featuredProjects = projects.filter(
