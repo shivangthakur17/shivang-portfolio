@@ -17,14 +17,14 @@
   --border-secondary: #D5CEC1;
   --focus: #7F9475;
 
-  --action-primary: #55684D;
-  --action-primary-hover: #485A42;
-  --action-primary-text: #FFFFFF;
+  --action-primary: #173F35;
+  --action-primary-hover: #12342C;
+  --action-primary-text: #F8F6F1;
 
   --action-secondary-text: #20231F;
-  --action-secondary-border: #BEB7AA;
-  --action-secondary-hover-bg: #E8E2D8;
-  --action-secondary-hover-border: #AFA798;
+  --action-secondary-border: #BDB6AA;
+  --action-secondary-hover-bg: #EEE9DF;
+  --action-secondary-hover-border: #AAA295;
 
   --action-ghost-text: #33402F;
   --action-ghost-hover-bg: #EEE9DF;
@@ -53,14 +53,14 @@
   --border-secondary: #33433C;
   --focus: #C0D0B5;
 
-  --action-primary: #C0D0B5;
-  --action-primary-hover: #CFDCC7;
-  --action-primary-text: #101510;
+  --action-primary: #F1EEE5;
+  --action-primary-hover: #E6E1D6;
+  --action-primary-text: #112018;
 
   --action-secondary-text: #F1EEE7;
-  --action-secondary-border: #53635A;
-  --action-secondary-hover-bg: #1D2924;
-  --action-secondary-hover-border: #718278;
+  --action-secondary-border: #52645B;
+  --action-secondary-hover-bg: #1A2722;
+  --action-secondary-hover-border: #708278;
 
   --action-ghost-text: #D5DFD0;
   --action-ghost-hover-bg: #18231F;
