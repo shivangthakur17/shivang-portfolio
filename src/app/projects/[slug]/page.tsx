@@ -127,6 +127,30 @@ export default async function ProjectPage({
                     {project.status.replace("-", " ")}
                   </dd>
                 </div>
+
+                {project.projectType && (
+                  <div>
+                    <dt className="text-sm font-semibold text-muted">
+                      Project Type
+                    </dt>
+
+                    <dd className="mt-1">
+                      {project.projectType}
+                    </dd>
+                  </div>
+                )}
+
+                {project.course && (
+                  <div>
+                    <dt className="text-sm font-semibold text-muted">
+                      Course
+                    </dt>
+
+                    <dd className="mt-1">
+                      {project.course}
+                    </dd>
+                  </div>
+                )}
               </dl>
             </aside>
 

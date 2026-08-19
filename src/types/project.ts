@@ -16,6 +16,8 @@ export type Project = {
   problem?: string;
   architecture?: string;
   team?: string;
+  course?: string;
+  projectType?: string;
   responsibilities?: string[];
   outcomes?: string[];
   screenshots?: string[];

@@ -2,6 +2,53 @@ import type { Project } from "@/types/project";
 
 export const projects: Project[] = [
   {
+    slug: "baettledger",
+    title: "BaettLedger",
+    summary: "A construction-site equipment tracking system that automatically detects and reconciles equipment moving on and off job sites using edge cameras and Azure AI, replacing manual clipboard tracking.",
+    description: "Our team designed an automated equipment-tracking pipeline combining edge image capture, Azure AI services, cloud APIs, structured data storage, and a live dashboard.\n\nA Raspberry Pi and camera capture four views for each tracking session:\n- left\n- middle\n- right\n- overview\n\nThe images are uploaded to Azure Blob Storage and processed through Azure AI Vision.\n\nDetection results are then passed through an Azure AI Foundry Count Agent, which performs structured count reconciliation before trusted counts are stored and exposed through the API.\n\nA confidence threshold of 0.80 is used as a reliability safeguard before detections are accepted.",
+    status: "completed",
+    featured: true,
+    role: "API Backend Owner",
+    technologies: [
+      "Python 3.11",
+      "Azure Functions",
+      "Azure AI Vision",
+      "Azure AI Foundry",
+      "Azure SQL",
+      "Azure Blob Storage",
+      "Azure Static Web Apps",
+      "Raspberry Pi"
+    ],
+    problem: "Construction sites often rely on manual observation, clipboards, and spreadsheets to track equipment entering and leaving a job site.\n\nThis process is slow, error-prone, and provides little real-time visibility into what equipment is currently on-site, what has left, or what may be missing.",
+    architecture: "Edge Camera\n→ Azure Functions\n→ Blob Storage\n→ AI Vision\n→ Count Agent\n→ Azure SQL\n→ Dashboard",
+    course: "Emerging Trends",
+    projectType: "Applied AI / Cloud / Edge Computing",
+    responsibilities: [
+      "Built and tested the complete v2 API backend end-to-end against real Azure resources",
+      "Implemented equipment-tracking session creation",
+      "Built photo-upload flows into Azure Blob Storage",
+      "Implemented Azure SQL database writes",
+      "Integrated Azure AI Vision detection calls",
+      "Integrated the Azure AI Foundry Count Agent",
+      "Implemented detection persistence and reconciliation logic",
+      "Added idempotent duplicate-request handling",
+      "Implemented authenticated API requests",
+      "Tested the complete backend workflow across Azure services",
+      "Debugged cross-service configuration and request issues",
+      "Merged backend changes into the main repository through pull requests"
+    ],
+    challenges: [
+      "One of the biggest challenges was making the system reliable across multiple independent cloud services.",
+      "Small configuration or request-formatting issues could break the entire pipeline even when the individual service was working correctly.",
+      "Examples included malformed endpoint configuration values and PowerShell JSON/request formatting issues during API testing.",
+      "This reinforced the importance of validating configuration boundaries, testing integrations independently, and tracing failures across distributed systems rather than assuming the problem exists inside a single service."
+    ],
+    lessons: [
+      "Building an AI-enabled system is not just about calling an AI model.",
+      "The reliability of the surrounding API layer, authentication, storage, configuration, error handling, idempotency, and confidence rules has a major impact on whether the AI output can actually be trusted in a production-style workflow."
+    ]
+  },
+  {
     slug: "capstone-project",
     title: "LÄYRD — Cake in a Can | Espresso Shots",
     summary: "A full-stack e-commerce platform built for a Calgary boutique dessert brand selling handcrafted cheesecakes, tiramisu in 250ml cans, and espresso shots, combining retail, private-event, wholesale, and administrative workflows in one platform.",
