@@ -17,9 +17,9 @@
   --border-secondary: #D5CEC1;
   --focus: #7F9475;
 
-  --action-primary: #173F35;
+  --action-primary-bg: #173F35;
   --action-primary-hover: #12342C;
-  --action-primary-fg: #F8F6F1;
+  --action-primary-text: #F8F6F1;
 
   --action-secondary-fg: #20231F;
   --action-secondary-border: #BDB6AA;
@@ -53,9 +53,9 @@
   --border-secondary: #33433C;
   --focus: #C0D0B5;
 
-  --action-primary: #F1EEE5;
+  --action-primary-bg: #F1EEE5;
   --action-primary-hover: #E6E1D6;
-  --action-primary-fg: #112018;
+  --action-primary-text: #112018;
 
   --action-secondary-fg: #F1EEE7;
   --action-secondary-border: #52645B;
@@ -85,9 +85,9 @@
   --color-border-secondary: var(--border-secondary);
   --color-focus: var(--focus);
 
-  --color-action-primary: var(--action-primary);
+  --color-action-primary-bg: var(--action-primary-bg);
   --color-action-primary-hover: var(--action-primary-hover);
-  --color-action-primary-fg: var(--action-primary-fg);
+  --color-action-primary-text: var(--action-primary-text);
 
   --color-action-secondary-fg: var(--action-secondary-fg);
   --color-action-secondary-border: var(--action-secondary-border);
