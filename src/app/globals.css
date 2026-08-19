@@ -1,19 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8f6f1;
-  --surface: #eee9df;
-  --surface-soft: #f3efe7;
+  --background: #F8F6F1;
+  --surface: #F3EFE7;
+  --surface-soft: #EEE9DF;
 
-  --foreground: #20231f;
-  --muted: #686d65;
+  --foreground: #20231F;
+  --muted: #686D65;
 
-  --sage: #718267;
-  --sage-dark: #526249;
-  --sage-soft: #dce4d6;
+  --sage: #667A5B;
+  --sage-dark: #586B4F;
+  --sage-accent: #5E7355;
+  --sage-soft: #DCE4D6;
 
-  --border: #dcd6ca;
-  --focus: #617358;
+  --border: #D8D1C5;
+  --border-secondary: #D5CEC1;
+  --focus: #667A5B;
 
   --radius-small: 0.75rem;
   --radius-medium: 1.25rem;
@@ -24,18 +26,20 @@
 
 .dark {
   --background: #0F1714;
-  --surface: #18231F;
-  --surface-soft: #1B2723;
+  --surface: #151F1B;
+  --surface-soft: #1A2722;
 
-  --foreground: #E2E0D8;
-  --muted: #A0A59E;
+  --foreground: #E8E4DA;
+  --muted: #AAAFA6;
 
-  --sage: #86997B;
-  --sage-dark: #718267;
+  --sage: #A3B497;
+  --sage-dark: #B2C1A7;
+  --sage-accent: #92A789;
   --sage-soft: #22312C;
 
-  --border: #22312C;
-  --focus: #86997B;
+  --border: #293A33;
+  --border-secondary: #33433C;
+  --focus: #A3B497;
 
   --shadow-soft: 0 20px 60px rgb(0 0 0 / 30%);
 }
@@ -50,9 +54,11 @@
 
   --color-sage: var(--sage);
   --color-sage-dark: var(--sage-dark);
+  --color-sage-accent: var(--sage-accent);
   --color-sage-soft: var(--sage-soft);
 
   --color-border: var(--border);
+  --color-border-secondary: var(--border-secondary);
   --color-focus: var(--focus);
 
   --font-sans: var(--font-inter);
